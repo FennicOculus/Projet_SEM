@@ -5,6 +5,7 @@ import android.app.Activity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -22,6 +23,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.projetsem.MainMenuActivity;
 import com.example.projetsem.R;
 import com.example.projetsem.ui.login.LoginViewModel;
 import com.example.projetsem.ui.login.LoginViewModelFactory;
@@ -49,6 +51,7 @@ public class LoginActivity extends AppCompatActivity {
                 String pass = password.getText().toString();
                 if (mail.equals("admin@usthb") && pass.equals("123")) {
                     Toast.makeText(getApplicationContext(), "Login Success \n Welcome : admin-----------", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(LoginActivity.this, MainMenuActivity.class));
                 } else if(mail.isEmpty() || !mail.contains("@") || !mail.contains("usthb")){
                     Toast.makeText(getApplicationContext(), "Please enter a valid USTHB email address", Toast.LENGTH_SHORT).show();
                 }else if(pass.isEmpty() || pass.length() < 2){
