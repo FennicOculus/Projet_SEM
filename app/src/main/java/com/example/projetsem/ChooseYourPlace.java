@@ -12,6 +12,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 public class ChooseYourPlace extends AppCompatActivity {
@@ -61,8 +62,7 @@ public class ChooseYourPlace extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView<?> arrayAdapter, View view, int position, long id) {
-                Toast.makeText(ChooseYourPlace.this, "You clicked on " + namesArray.get(position)+ " At coor "+locationsArray.get(position).getLatitude(), Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(ChooseYourPlace.this, Compass.class));
+                startActivity(new Intent(ChooseYourPlace.this, Compass.class).putExtra("key1", locationsArray.get(position).getLatitude()).putExtra("key2", locationsArray.get(position).getLongitude()));
             }
         });
 
@@ -191,6 +191,8 @@ public class ChooseYourPlace extends AppCompatActivity {
         locationsArray.add(new Coordinats(36.7099330055378f, 3.1824201467306983f));
         namesArray.add("Nouveau Nouveau Blocs");
         locationsArray.add(new Coordinats(36.70938817472637f, 3.1813432678155347f));
+        namesArray.add("dummy test");
+        locationsArray.add(new Coordinats(36.789490591185135f, 2.9071787495555994f));
     }
 
 
