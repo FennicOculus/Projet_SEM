@@ -9,7 +9,7 @@
     android:background="@drawable/fond">
 
     <Button
-        android:id="@+id/Facultybtn"
+        android:id="@+id/FacultyBtn"
         android:layout_width="134dp"
         android:layout_height="84dp"
         android:text="Faculté"
@@ -33,7 +33,7 @@
         app:layout_constraintVertical_bias="0.698" />
 
     <Button
-        android:id="@+id/KoisqueBtn"
+        android:id="@+id/KiosqueBtn"
         android:layout_width="134dp"
         android:layout_height="84dp"
         android:text="Kiosque"
@@ -51,13 +51,16 @@
         android:layout_marginTop="127dp"
         android:layout_marginEnd="28dp"
         android:text="Salles"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton2"
-        app:layout_constraintVertical_bias="0.011" />
+        app:layout_constraintVertical_bias="0.011"
+        app:cornerRadius="70dp"
+        />
 
     <Button
-        android:id="@+id/Amphi"
+        android:id="@+id/AmphiBtn"
         android:layout_width="134dp"
         android:layout_height="84dp"
         android:text="Amphi"

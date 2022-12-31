@@ -49,8 +49,8 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String mail = email.getText().toString();
                 String pass = password.getText().toString();
-                if (mail.equals("admin@usthb") && pass.equals("123")) {
-                    Toast.makeText(getApplicationContext(), "Login Success \n Welcome : admin-----------", Toast.LENGTH_SHORT).show();
+                if (mail.equals("") && pass.equals("")) {
+                    Toast.makeText(getApplicationContext(), "Login Success \n Welcome : ", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(LoginActivity.this, MainMenuActivity.class));
                 } else if(mail.isEmpty() || !mail.contains("@") || !mail.contains("usthb")){
                     Toast.makeText(getApplicationContext(), "Please enter a valid USTHB email address", Toast.LENGTH_SHORT).show();
