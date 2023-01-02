@@ -84,6 +84,7 @@ public class Compass extends AppCompatActivity {
 
         compass = findViewById(R.id.compass);
         button = findViewById(R.id.button);
+        textView = findViewById(R.id.textView);
 
         //User location Initialization
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
@@ -109,11 +110,6 @@ public class Compass extends AppCompatActivity {
 
 
 
-    }
-
-    protected void requestPermission() {
-        String [] permissions = {Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.CAMERA};
-        ActivityCompat.requestPermissions(this, permissions, 123);
     }
 
     protected void getLocationUpdate(){
@@ -180,7 +176,9 @@ public class Compass extends AppCompatActivity {
                 destination.setLatitude(dlat);
                 destination.setLongitude(dlong);
                 float bearing = currentLocation.bearingTo(destination);
+                float distence = currentLocation.distanceTo(destination);
                 compass.setRotation((float) (bearing - (floatOrientation[0]) * 180 / Math.PI));
+                textView.setText(distence + " m");
                 //textView.setText("mLat " + mLat + " mLong " + mLong+ "\n heading"+ (float) (bearing - (floatOrientation[0]) * 180 / Math.PI ));
             }
 

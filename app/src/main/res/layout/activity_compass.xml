@@ -49,7 +49,17 @@
         android:textAlignment="center"
         app:layout_constraintVertical_bias="0.824" />
 
-
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="52dp"
+        android:layout_alignStart="@+id/compass"
+        android:layout_alignEnd="@+id/compass"
+        android:layout_alignBottom="@+id/button"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="-8dp"
+        android:layout_marginBottom="598dp"
+        android:textAlignment="center" />
 
 
 </RelativeLayout>
