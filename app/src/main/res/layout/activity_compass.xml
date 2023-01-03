@@ -6,25 +6,60 @@
     android:layout_height="match_parent"
     tools:context=".Compass">
 
-
-    <SurfaceView
-        android:id="@+id/surfaceView"
+    <io.github.sceneview.ar.ArSceneView
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="194dp"
-        android:layout_height="213dp"
+        android:layout_height="match_parent"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="91dp"
-        android:layout_marginTop="260dp"
-        android:layout_marginEnd="126dp"
-        android:layout_marginBottom="258dp"
+        />
+
+    <ImageView
+        android:id="@+id/compass"
+        android:layout_width="181dp"
+        android:layout_height="369dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginEnd="122dp"
+        android:layout_marginBottom="181dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/arrow" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="171dp"
+        android:layout_height="63dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="114dp"
+        android:layout_marginTop="618dp"
+        android:layout_marginEnd="126dp"
+        android:layout_marginBottom="51dp"
+        android:text="Start Navigation"
+        android:textAlignment="center"
+        app:layout_constraintVertical_bias="0.824" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="52dp"
+        android:layout_alignStart="@+id/compass"
+        android:layout_alignEnd="@+id/compass"
+        android:layout_alignBottom="@+id/button"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="-8dp"
+        android:layout_marginBottom="598dp"
+        android:textAlignment="center" />
 
 
 </RelativeLayout>
