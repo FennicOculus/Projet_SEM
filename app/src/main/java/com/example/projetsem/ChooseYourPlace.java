@@ -4,11 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,6 +29,7 @@ public class ChooseYourPlace extends AppCompatActivity {
     private ListView listView;
     private ArrayList<String> namesArray = new ArrayList<>(); //Store Places Name
     private ArrayList<Coordinats> locationsArray = new ArrayList<>(); // Store Place coordinates
+    private ArrayAdapter arrayAdapter;
 
 
     @Override
@@ -66,7 +70,7 @@ public class ChooseYourPlace extends AppCompatActivity {
             }
         }
 
-        ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, namesArray);
+        arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, namesArray);
         listView.setAdapter(arrayAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
@@ -78,6 +82,30 @@ public class ChooseYourPlace extends AppCompatActivity {
 
 
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        MenuItem menuItem = menu.findItem(R.id.action_search);
+        SearchView searchView = (SearchView) menuItem.getActionView();
+        searchView.setQueryHint("Type here to search");
+
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener(){
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+
+                arrayAdapter.getFilter().filter(newText);
+                return false;
+            }
+        });
+        return true;
     }
 
 
