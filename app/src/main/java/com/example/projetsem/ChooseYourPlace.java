@@ -12,24 +12,20 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SearchView;
-import android.widget.TextView;
-import android.widget.Toast;
-
-import java.io.Serializable;
 import java.util.ArrayList;
 
 public class ChooseYourPlace extends AppCompatActivity {
 
     //Buttons
-    private Button Backbtn;
+    Button Backbtn;
 
 
 
     //List View
-    private ListView listView;
-    private ArrayList<String> namesArray = new ArrayList<>(); //Store Places Name
-    private ArrayList<Coordinats> locationsArray = new ArrayList<>(); // Store Place coordinates
-    private ArrayAdapter arrayAdapter;
+    ListView listView;
+    ArrayList<String> namesArray = new ArrayList<>(); //Store Places Name
+    ArrayList<Coordinats> locationsArray = new ArrayList<>(); // Store Place coordinates
+    ArrayAdapter arrayAdapter;
 
 
     @Override
