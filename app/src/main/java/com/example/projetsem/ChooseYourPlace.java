@@ -54,6 +54,15 @@ public class ChooseYourPlace extends AppCompatActivity {
                 case "Faculty":
                     Faculty();
                     break;
+                case "Buvettes":
+                    Buvettes();
+                    break;
+                case "Kiosques":
+                    Kiosque();
+                    break;
+                case "Discovery":
+                    Discovery();
+                    break;
             }
         }
 
@@ -77,7 +86,8 @@ public class ChooseYourPlace extends AppCompatActivity {
         locationsArray.clear();
         namesArray.clear();
 
-        //hardcoding location cuz too lazy to actually use google maps api and get the coordinates especially since internet at uni SUCKS sa race
+        //hardcoding location cuz too lazy to actually use google maps api and get the coordinates especially since internet is bad AND not all places
+        //are on google maps
         namesArray.add("Biologie 1");
         locationsArray.add(new Coordinats(36.71268305718414f, 3.1825495347899957f));
         namesArray.add("Biologie 2");
@@ -119,7 +129,8 @@ public class ChooseYourPlace extends AppCompatActivity {
         locationsArray.clear();
         namesArray.clear();
 
-        //hardcoding location cuz too lazy to actually use google maps api and get the coordinates especially since internet at uni SUCKS sa race
+        //hardcoding location cuz too lazy to actually use google maps api and get the coordinates especially since internet is bad AND not all places
+        //are on google maps
         namesArray.add("Amphitheatre A");
         locationsArray.add(new Coordinats(36.712053623104076f, 3.1804067578997417f));
         namesArray.add("Amphitheatre B");
@@ -178,7 +189,8 @@ public class ChooseYourPlace extends AppCompatActivity {
         locationsArray.clear();
         namesArray.clear();
 
-        //hardcoding location cuz too lazy to actually use google maps api and get the coordinates especially since internet
+        //hardcoding location cuz too lazy to actually use google maps api and get the coordinates especially since internet is bad AND not all places
+        //are on google maps
         namesArray.add("Bloc 100/200 1");
         locationsArray.add(new Coordinats(36.71211260165351f, 3.181799273487491f));
         namesArray.add("Bloc 100/200 2");
@@ -191,9 +203,137 @@ public class ChooseYourPlace extends AppCompatActivity {
         locationsArray.add(new Coordinats(36.7099330055378f, 3.1824201467306983f));
         namesArray.add("Nouveau Nouveau Blocs");
         locationsArray.add(new Coordinats(36.70938817472637f, 3.1813432678155347f));
-        namesArray.add("dummy test");
-        locationsArray.add(new Coordinats(36.789490591185135f, 2.9071787495555994f));
+        namesArray.add("Salle de conférence Faculté Informatique");
+        locationsArray.add(new Coordinats(36.71534138894215f, 3.1851521424791116f));
+        namesArray.add("Centre des langues");
+        locationsArray.add(new Coordinats(36.70996944294591f, 3.183422526696816f));
     }
 
+    protected void Buvettes(){
+        //clearing previous data on array
+        locationsArray.clear();
+        namesArray.clear();
+
+        //hardcoding location cuz too lazy to actually use google maps api and get the coordinates especially since internet is bad AND not all places
+        //are on google maps
+        namesArray.add("Fast Food Faculté Informatique");
+        locationsArray.add(new Coordinats(36.71492002322586f, 3.1852474623619766f));
+        namesArray.add("Mécanicien");
+        locationsArray.add(new Coordinats(36.70994975123639f, 3.1797288639380157f));
+        namesArray.add("Buvette 1");
+        locationsArray.add(new Coordinats(36.71124337840574f, 3.1783760181892218f));
+        namesArray.add("Buvette 2");
+        locationsArray.add(new Coordinats(36.71116536954654f, 3.178276311110557f));
+        namesArray.add("Buvette 3");
+        locationsArray.add(new Coordinats(36.711125052959595f, 3.178167011100341f));
+        namesArray.add("Buvette 4");
+        locationsArray.add(new Coordinats(36.71105955363696f, 3.1780489860104746f));
+        namesArray.add("Restaurant Etudiant");
+        locationsArray.add(new Coordinats(36.712133564043576f, 3.1765745747480443f));
+        namesArray.add("Restaurant Enseignants");
+        locationsArray.add(new Coordinats(36.71167341978842f, 3.1765534263484554f));
+        namesArray.add("La marquise");
+        locationsArray.add(new Coordinats(36.712617457335284f, 3.1761814058165605f));
+        namesArray.add("Mc Kiffan");
+        locationsArray.add(new Coordinats(36.71284981634486f, 3.1759952743816364f));
+    }
+
+    protected void Kiosque(){
+        //clearing previous data on array
+        locationsArray.clear();
+        namesArray.clear();
+
+        //hardcoding location cuz too lazy to actually use google maps api and get the coordinates especially since internet is bad AND not all places
+        //are on google maps
+        namesArray.add("Kiosque Rectorat");
+        locationsArray.add(new Coordinats(36.71270886918916f, 3.1777696445583845f));
+        namesArray.add("Kiosque Faculté Informatique");
+        locationsArray.add(new Coordinats(36.71515104571426f, 3.1851535057210634f));
+        namesArray.add("Kiosque Cyber Espace");
+        locationsArray.add(new Coordinats(36.71525660747472f, 3.18559787226526f));
+        namesArray.add("Kiosque Mosqué");
+        locationsArray.add(new Coordinats(36.70986038753656f, 3.179854163673416f));
+        namesArray.add("Chemin des kiosques");
+        locationsArray.add(new Coordinats(36.71088335673558f, 3.178764019791162f));
+        namesArray.add("Kiosque Parking");
+        locationsArray.add(new Coordinats(36.71183504131582f, 3.1824803171976055f));
+        namesArray.add("Kiosque Kader");
+        locationsArray.add(new Coordinats(36.7116274958815f, 3.1825270117906626f));
+        namesArray.add("Sido");
+        locationsArray.add(new Coordinats(36.712040928385065f, 3.1838115445226793f));
+        namesArray.add("Kiosque Route Parking");
+        locationsArray.add(new Coordinats(36.71174065488837f, 3.1843980115515365f));
+
+    }
+
+    protected void Discovery(){
+        //clearing previous data on array
+        locationsArray.clear();
+        namesArray.clear();
+
+        //hardcoding location cuz too lazy to actually use google maps api and get the coordinates especially since internet is bad AND not all places
+        //are on google maps
+        namesArray.add("Recorat");
+        locationsArray.add(new Coordinats(36.71398611949572f, 3.1776769002775187f));
+        namesArray.add("Rectorat Annexe");
+        locationsArray.add(new Coordinats(36.7138674930489f, 3.177290074389978f));
+        namesArray.add("English Speakers Club");
+        locationsArray.add(new Coordinats(36.71360570441509f, 3.176374464971356f));
+        namesArray.add("Maison de la Science");
+        locationsArray.add(new Coordinats(36.71354765036708f, 3.1762725410354484f));
+        namesArray.add("USTHB-Icosnet Startups Incubator");
+        locationsArray.add(new Coordinats(36.71374646420998f, 3.176162949517256f));
+        namesArray.add("Salle de sport");
+        locationsArray.add(new Coordinats(36.71313239670855f, 3.1756141771746f));
+        namesArray.add("Village Universitaire");
+        locationsArray.add(new Coordinats(36.71221585513878f, 3.177500112975567f));
+        namesArray.add("Bureau de bourse USTHB");
+        locationsArray.add(new Coordinats(36.71182155359056f, 3.1764279174139305f));
+        namesArray.add("Project Initiative Club");
+        locationsArray.add(new Coordinats(36.711489610169046f, 3.1768327107935397f));
+        namesArray.add("Club RO | ORS");
+        locationsArray.add(new Coordinats(36.71117640508476f, 3.1771659522852373f));
+        namesArray.add("Bureau de poste (approximative)");
+        locationsArray.add(new Coordinats(36.71144706481668f, 3.177342371153263f));
+        namesArray.add("Mosquée de L'université");
+        locationsArray.add(new Coordinats(36.71025747164741f, 3.179199635336109f));
+        namesArray.add("Infirmerie");
+        locationsArray.add(new Coordinats(36.710367961165694f, 3.1836036547827913f));
+        namesArray.add("Parking Etudiant");
+        locationsArray.add(new Coordinats(36.711501825588705f, 3.1832846240109958f));
+        namesArray.add("Arrêt Cous Université");
+        locationsArray.add(new Coordinats(36.71088285108675f, 3.1829258581422546f));
+        namesArray.add("Hall Technologique");
+        locationsArray.add(new Coordinats(36.71434759581694f, 3.1869155019642474f));
+        namesArray.add("Cyber Espace/Espace Internet");
+        locationsArray.add(new Coordinats(36.71538640553778f, 3.1860779585445496f));
+        namesArray.add("Micro Club");
+        locationsArray.add(new Coordinats(36.71609510643058f, 3.185085392845442f));
+        namesArray.add("Open Minds Club");
+        locationsArray.add(new Coordinats(36.71596289975103f, 3.183005781243729f));
+        namesArray.add("Campus Numérique Francophone Alger");
+        locationsArray.add(new Coordinats(36.71603979347348f, 3.1832812560293164f));
+        namesArray.add("Centre de Calcul");
+        locationsArray.add(new Coordinats(36.716197523945326f, 3.183118922673524f));
+        namesArray.add("Celec Club");
+        locationsArray.add(new Coordinats(36.71632651911623f, 3.1820784371451585f));
+        namesArray.add("Process Club");
+        locationsArray.add(new Coordinats(36.71577949104755f, 3.180287038919218f));
+        namesArray.add("Ozone Club");
+        locationsArray.add(new Coordinats(36.71339646358549f, 3.182653001647617f));
+        namesArray.add("Orbis Club");
+        locationsArray.add(new Coordinats(36.71652516487551f, 3.1815306707626174f));
+        namesArray.add("Club Génie Civil");
+        locationsArray.add(new Coordinats(36.71463570590703f, 3.182161254612429f));
+        namesArray.add("Bibliothèque");
+        locationsArray.add(new Coordinats(36.71377523948523f, 3.1809531208495523f));
+        namesArray.add("Auditorium");
+        locationsArray.add(new Coordinats(36.714870183898476f, 3.1787441188266823f));
+        namesArray.add("Lac Universitaire");
+        locationsArray.add(new Coordinats(36.713897865031f, 3.1792766160968386f));
+        namesArray.add("Lac Auditorium");
+        locationsArray.add(new Coordinats(36.7149722426537f, 3.1783158399188687f));
+
+    }
 
 }

@@ -45,14 +45,17 @@ public class MainMenuActivity extends AppCompatActivity {
         });
 
         buvettebtn.setOnClickListener(v -> {
-            Toast.makeText(MainMenuActivity.this, "Not Yet Implemented, Wait for future Updates", Toast.LENGTH_SHORT).show();
+            String value = "Buvettes";
+            startActivity(new Intent(MainMenuActivity.this, ChooseYourPlace.class).putExtra("key", value));
         });
 
         Discoverybtn.setOnClickListener(v -> {
-            Toast.makeText(MainMenuActivity.this, "Not Yet Implemented, Wait for future Updates", Toast.LENGTH_SHORT).show();
+            String value = "Discovery";
+            startActivity(new Intent(MainMenuActivity.this, ChooseYourPlace.class).putExtra("key", value));
         });
         Kiosquebtn.setOnClickListener(v -> {
-            Toast.makeText(MainMenuActivity.this, "Not Yet Implemented, Wait for future Updates", Toast.LENGTH_SHORT).show();
+            String value = "Kiosques";
+            startActivity(new Intent(MainMenuActivity.this, ChooseYourPlace.class).putExtra("key", value));
         });
 
 
