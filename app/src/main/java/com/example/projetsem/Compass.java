@@ -45,6 +45,8 @@ public class Compass extends AppCompatActivity {
     private ImageView compass;
     private TextView textView;
     private Button button;
+
+
     private double mLat;
     private double mLong;
     private double dlat;
@@ -178,7 +180,11 @@ public class Compass extends AppCompatActivity {
                 float bearing = currentLocation.bearingTo(destination);
                 float distence = currentLocation.distanceTo(destination);
                 compass.setRotation((float) (bearing - (floatOrientation[0]) * 180 / Math.PI));
-                textView.setText(distence + " m");
+                if(distence < 1100){
+                    textView.setText(distence + " m");
+                }else {
+                    textView.setText(distence/1000 + " km");
+                }
                 //textView.setText("mLat " + mLat + " mLong " + mLong+ "\n heading"+ (float) (bearing - (floatOrientation[0]) * 180 / Math.PI ));
             }
 
