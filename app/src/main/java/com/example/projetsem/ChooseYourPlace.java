@@ -57,9 +57,6 @@ public class ChooseYourPlace extends AppCompatActivity {
                 case "Buvettes":
                     Buvettes();
                     break;
-                case "Kiosques":
-                    Kiosque();
-                    break;
                 case "Discovery":
                     Discovery();
                     break;
@@ -260,15 +257,6 @@ public class ChooseYourPlace extends AppCompatActivity {
         locationsArray.add(new Coordinats(36.712617457335284f, 3.1761814058165605f));
         namesArray.add("Mc Kiffan");
         locationsArray.add(new Coordinats(36.71284981634486f, 3.1759952743816364f));
-    }
-
-    protected void Kiosque(){
-        //clearing previous data on array
-        locationsArray.clear();
-        namesArray.clear();
-
-        //hardcoding location cuz too lazy to actually use google maps api and get the coordinates especially since internet is bad AND not all places
-        //are on google maps
         namesArray.add("Kiosque Rectorat");
         locationsArray.add(new Coordinats(36.71270886918916f, 3.1777696445583845f));
         namesArray.add("Kiosque Faculté Informatique");
@@ -287,7 +275,6 @@ public class ChooseYourPlace extends AppCompatActivity {
         locationsArray.add(new Coordinats(36.712040928385065f, 3.1838115445226793f));
         namesArray.add("Kiosque Route Parking");
         locationsArray.add(new Coordinats(36.71174065488837f, 3.1843980115515365f));
-
     }
 
     protected void Discovery(){

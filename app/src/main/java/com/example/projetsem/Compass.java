@@ -7,6 +7,7 @@ import androidx.core.app.ActivityCompat;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.IntentSender;
+import android.graphics.Color;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -81,7 +82,9 @@ public class Compass extends AppCompatActivity {
 
         compass = findViewById(R.id.compass);
         button = findViewById(R.id.button);
+        button.setBackgroundColor(Color.TRANSPARENT);
         textView = findViewById(R.id.textView);
+        textView.setTextColor(Color.BLACK);
 
         //User location Initialization
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
