@@ -43,7 +43,6 @@ public class Compass extends AppCompatActivity {
     private ImageView compass;
     private TextView textView;
     private Button button;
-    private ArSceneView arSceneView;
 
     private double mLat;
     private double mLong;
@@ -87,7 +86,6 @@ public class Compass extends AppCompatActivity {
         button.setBackgroundColor(Color.TRANSPARENT);
         textView = findViewById(R.id.textView);
         textView.setTextColor(Color.BLACK);
-        arSceneView = findViewById(R.id.ar_scene_view);
 
 
         //User location Initialization
