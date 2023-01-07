@@ -6,93 +6,81 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainMenuActivity"
-    android:background="@drawable/fond">
+    android:background="@drawable/mainmenu">
 
     <Button
         android:id="@+id/FacultyBtn"
-        android:layout_width="134dp"
-        android:layout_height="84dp"
-        android:text="Faculté"
+        android:layout_width="177dp"
+        android:layout_height="68dp"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.187"
+        app:layout_constraintHorizontal_bias="0.068"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.502" />
+        app:layout_constraintVertical_bias="0.708" />
 
     <Button
         android:id="@+id/DiscoveryBtn"
-        android:layout_width="134dp"
-        android:layout_height="84dp"
-        android:text="Discovery"
+        android:layout_width="176dp"
+        android:layout_height="68dp"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.187"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.698" />
-
-    <Button
-        android:id="@+id/KiosqueBtn"
-        android:layout_width="134dp"
-        android:layout_height="84dp"
-        android:text="Kiosque"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.919"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.698" />
+        app:layout_constraintVertical_bias="0.84" />
 
     <Button
         android:id="@+id/SallesBtn"
-        android:layout_width="134dp"
-        android:layout_height="84dp"
+        android:layout_width="173dp"
+        android:layout_height="72dp"
         android:layout_marginTop="127dp"
-        android:layout_marginEnd="28dp"
-        android:text="Salles"
+        android:layout_marginEnd="16dp"
         android:textSize="18sp"
+        android:visibility="visible"
+        app:cornerRadius="70dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton2"
-        app:layout_constraintVertical_bias="0.011"
-        app:cornerRadius="70dp"
-        />
+        app:layout_constraintVertical_bias="0.407" />
 
     <Button
         android:id="@+id/AmphiBtn"
-        android:layout_width="134dp"
-        android:layout_height="84dp"
-        android:text="Amphi"
+        android:layout_width="173dp"
+        android:layout_height="70dp"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.187"
+        app:layout_constraintHorizontal_bias="0.057"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.296" />
+        app:layout_constraintVertical_bias="0.582" />
 
     <Button
         android:id="@+id/BuvetteBtn"
-        android:layout_width="134dp"
-        android:layout_height="84dp"
-        android:text="Buvette"
+        android:layout_width="174dp"
+        android:layout_height="76dp"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.919"
+        app:layout_constraintHorizontal_bias="0.938"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.502" />
+        app:layout_constraintVertical_bias="0.703" />
 
     <ImageButton
         android:id="@+id/imageButton2"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="72dp"
+        android:layout_height="66dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="28dp"
         android:adjustViewBounds="true"
         android:background="@drawable/roundbutton"
         android:contentDescription="profile menu"
         android:scaleType="centerInside"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/icon"

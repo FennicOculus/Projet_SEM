@@ -6,6 +6,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -35,6 +36,7 @@ public class LoginActivity extends AppCompatActivity {
     private TextView btn;
     private EditText email, password;
     private Button btnlogin;
+    private Button forgotpassword;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -42,14 +44,34 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         email = findViewById(R.id.username);
+        email.setBackgroundColor(Color.TRANSPARENT);
+        email.setTextColor(Color.rgb(0, 0, 0));
         password = findViewById(R.id.password);
+        password.setBackgroundColor(Color.TRANSPARENT);
+        password.setTextColor(Color.rgb(0, 0, 0));
+        forgotpassword = findViewById(R.id.button2);
+        forgotpassword.setBackgroundColor(Color.TRANSPARENT);
+        forgotpassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(LoginActivity.this, "Veuillez vous approcher de l'espace internet", Toast.LENGTH_SHORT).show();
+            }
+        });
         btnlogin = findViewById(R.id.btnlogin);
+        btnlogin.setBackgroundColor(Color.TRANSPARENT);
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String mail = email.getText().toString();
                 String pass = password.getText().toString();
-                if (mail.equals("") && pass.equals("")) {
+
+                String Mail1 = "admin";
+                String Pass1 = "admin";
+
+                String Mail2 = "admin@etu.usthb.dz";
+                String Pass2 = "admin";
+
+                if (mail.equals(Mail1) && pass.equals(Pass1) || mail.equals(Mail2) && pass.equals(Pass2)) {
                     Toast.makeText(getApplicationContext(), "Login Success \n Welcome : ", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(LoginActivity.this, MainMenuActivity.class));
                 } else if(mail.isEmpty() || !mail.contains("@") || !mail.contains("usthb")){

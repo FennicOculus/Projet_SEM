@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.Toast;
@@ -13,7 +14,6 @@ import com.example.projetsem.ui.login.LoginActivity;
 public class MainMenuActivity extends AppCompatActivity {
     private Button Facultybtn;
     private Button Discoverybtn;
-    private Button Kiosquebtn;
     private Button Sallesbtn;
     private Button Amphibtn;
     private Button buvettebtn;
@@ -23,11 +23,15 @@ public class MainMenuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main_menu);
 
         Facultybtn = findViewById(R.id.FacultyBtn);
+        Facultybtn.setBackgroundColor(Color.TRANSPARENT);
         Discoverybtn = findViewById(R.id.DiscoveryBtn);
-        Kiosquebtn = findViewById(R.id.KiosqueBtn);
+        Discoverybtn.setBackgroundColor(Color.TRANSPARENT);
         Sallesbtn = findViewById(R.id.SallesBtn);
+        Sallesbtn.setBackgroundColor(Color.TRANSPARENT);
         Amphibtn = findViewById(R.id.AmphiBtn);
+        Amphibtn.setBackgroundColor(Color.TRANSPARENT);
         buvettebtn = findViewById(R.id.BuvetteBtn);
+        buvettebtn.setBackgroundColor(Color.TRANSPARENT);
 
         Amphibtn.setOnClickListener(v -> {
             String value = "Amphi";
@@ -53,10 +57,7 @@ public class MainMenuActivity extends AppCompatActivity {
             String value = "Discovery";
             startActivity(new Intent(MainMenuActivity.this, ChooseYourPlace.class).putExtra("key", value));
         });
-        Kiosquebtn.setOnClickListener(v -> {
-            String value = "Kiosques";
-            startActivity(new Intent(MainMenuActivity.this, ChooseYourPlace.class).putExtra("key", value));
-        });
+
 
 
 
