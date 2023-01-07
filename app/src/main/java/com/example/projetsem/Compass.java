@@ -112,6 +112,12 @@ public class Compass extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        fusedLocationProviderClient.removeLocationUpdates(locationCallback);
+    }
+
     protected void getLocationUpdate(){
 
         LocationRequest locationRequest = new LocationRequest.Builder(500)

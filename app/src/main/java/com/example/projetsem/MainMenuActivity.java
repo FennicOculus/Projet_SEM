@@ -58,11 +58,12 @@ public class MainMenuActivity extends AppCompatActivity {
             startActivity(new Intent(MainMenuActivity.this, ChooseYourPlace.class).putExtra("key", value));
         });
 
+    }
 
-
-
-
-
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
 
     }
 }
+
