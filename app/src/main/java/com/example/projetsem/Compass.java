@@ -36,12 +36,14 @@ import com.google.android.gms.location.SettingsClient;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
+import io.github.sceneview.ar.ArSceneView;
+
 public class Compass extends AppCompatActivity {
 
     private ImageView compass;
     private TextView textView;
     private Button button;
-
+    private ArSceneView arSceneView;
 
     private double mLat;
     private double mLong;
@@ -85,6 +87,8 @@ public class Compass extends AppCompatActivity {
         button.setBackgroundColor(Color.TRANSPARENT);
         textView = findViewById(R.id.textView);
         textView.setTextColor(Color.BLACK);
+        arSceneView = findViewById(R.id.ar_scene_view);
+
 
         //User location Initialization
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
