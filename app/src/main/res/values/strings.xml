@@ -9,4 +9,9 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <!-- Strings related to AR -->
+    <string name="sceneview_searching_planes"></string>
+    <string name="sceneview_tap_on_surface"></string>
+    <string name="sceneview_insufficient_features_message"></string>
+    <string name="sceneview_excessive_motion_message"></string>
 </resources>
