@@ -72,9 +72,13 @@ public class ChooseYourPlace extends AppCompatActivity {
             }
         });
 
+    }
 
-
-
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        namesArray.clear();
+        locationsArray.clear();
     }
 
     @Override
